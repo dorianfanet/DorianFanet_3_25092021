@@ -1,0 +1,15 @@
+.bouton{
+    margin: 20px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    div{
+        background-image: linear-gradient(350deg, $color-primary, $color-secondary);
+        width: 13rem;
+        height: 3rem;
+        line-height: 3rem;
+        border-radius: 30px;
+        @include box-box-shadow;
+    }
+}

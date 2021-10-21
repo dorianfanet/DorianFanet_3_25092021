@@ -1,0 +1,145 @@
+.entete{
+    text-align: center;
+    &__location{
+        background-color: #EAEAEA;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        i{
+            margin-right: 20px;
+        }
+    }
+    &__explore{
+        background-color: $color-background;
+        padding: 30px 20px;
+        h1{
+            margin: 0;
+        }
+        p{
+            color: hsl(0, 0, 35%);
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+    }
+}
+.fonctionnement{
+    @include page-width-padding;
+    margin: 50px 0;
+    &__box{
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        &--offset{
+            background-color: red;
+            width: 0.5rem;
+        }
+        &__icone{
+            background-color: $color-primary;
+            border-radius: 50%;
+            height: 2em;
+            aspect-ratio: 1;
+            font-size: 0.7rem;
+            color: white;
+            position: absolute;
+            p{
+                text-align: center;
+                margin: 0;
+                line-height: 2em;
+            }
+        }
+        &__container{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: $color-background;
+            border-radius: 1em;
+            height: 70px;
+            @include box-box-shadow;
+            i{
+                color: $text-color-grey;
+                margin: 0 30px;
+            }
+            &--highlight{
+                @include background-color-adjust(lighten($color-primary, 35%));
+                i{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
+.restaurants{
+    background-color: $color-background;
+    @include page-width-padding;
+    padding-bottom: 40px;
+    h2{
+        padding-top: 40px;
+    }
+    &__box{
+        margin: 0 0 20px 0;
+        display: block;
+        color: black;
+        border-radius: 1em;
+        overflow: hidden;
+        @include box-box-shadow;
+        background-color: #fff;
+        position: relative;
+        figure{
+            margin: 0;
+            img{
+                height: 180px;
+                width: 100%;
+                object-fit: cover;
+            }
+            figcaption{
+                display: flex;
+                justify-content: space-between;
+                margin: 15px;
+                h3{
+                    margin: 0;
+                }
+                p{
+                    margin: 5px 0;
+                    color: $text-color-grey;
+                    font-weight: 300;
+                }
+                i{
+                    font-size: 25px;
+                }
+            }
+        }
+        &__heart{
+            .heart--active{
+                display: none;
+            }
+            &:hover{
+                .heart--normal{
+                    display: none;
+                }
+                .heart--active{
+                    display: block;
+                    i{
+                        background: -webkit-linear-gradient($color-primary, $color-secondary);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+        &__nouveau{
+            display: none;
+            &--active{
+                display: block;
+                position: absolute;
+                font-weight: 500;
+                border-radius: 0.2em;
+                padding: 0.3em 1em;
+                @include box-box-shadow;
+                background-color: $color-validation-nouveau;
+                color: darken($color-validation-nouveau, 40%);
+                top: 0.7em;
+                right: 0.7em;
+            }
+        }
+    }
+}

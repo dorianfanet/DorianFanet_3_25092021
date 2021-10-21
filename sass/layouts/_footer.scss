@@ -1,0 +1,30 @@
+.footer{
+    background-color: #353535;
+    color: $text-color-light;
+    margin: 0;
+    padding: 5%;
+    &__logo{
+        filter: invert(100%);
+        width: 30%;
+    }
+    figure{
+        margin: 10px 0;
+    }
+    ul{
+        padding: 0;
+        li{
+            margin: 0.5em 0;
+            p{
+                display: inline;
+                margin: 0;
+            }
+            div{
+                width: 2em;
+            }
+        }
+    }
+    &--icone{
+        display: flex;
+        align-items: center;
+    }
+}
