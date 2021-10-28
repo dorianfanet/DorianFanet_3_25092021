@@ -2,9 +2,19 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+main{
+    max-width: 1024px;
+    margin: auto;
+}
 ul{
     list-style-type: none;
 }
 a{
     text-decoration: none;
+    color: black;
+}
+@media screen and (min-width:944px) {
+    main{
+        margin-top: 60px;
+    }
 }

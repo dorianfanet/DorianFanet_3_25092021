@@ -2,10 +2,14 @@
     background-color: #353535;
     color: $text-color-light;
     margin: 0;
-    padding: 5%;
+    padding: 20px;
     &__logo{
         filter: invert(100%);
-        width: 30%;
+        width: 100px;
+    }
+    &__container{
+        max-width: 944px;
+        margin: auto;
     }
     figure{
         margin: 10px 0;
@@ -14,9 +18,10 @@
         padding: 0;
         li{
             margin: 0.5em 0;
-            p{
+            a{
                 display: inline;
                 margin: 0;
+                color: white;
             }
             div{
                 width: 2em;
