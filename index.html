@@ -4,14 +4,29 @@
     <meta charset="utf-8">
     <title>Oh my food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Composez votre propre menu avant d'arriver au restaurant et dégustez-le directement en arrivant ! Plus de perte de temps à consulter la carte !">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/logo/favicon.png">
     <script src="https://kit.fontawesome.com/24038b89eb.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
     </style>
 </head>
 <body>
-    <div>
+    <div class="loader">
+        <div class="loader__container">
+            <span>o</span>
+            <span>h</span>
+            <span>m</span>
+            <span>y</span>
+            <span>f</span>
+            <span>o</span>
+            <span>o</span>
+            <span>d</span>
+        </div>
+    </div>
+    <div id="container">
         <header class="header--offset">
             <figure>
                 <img src="images/logo/ohmyfood.svg" alt="">
@@ -20,10 +35,12 @@
         <main>
             <section class="entete">
                 <div class="entete__location">
-                    <div>
-                        <i class="fas fa-map-marker-alt"></i>
+                    <form>
+                        <button>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </button>
                         <input type="text" placeholder="Paris, Belleville">
-                    </div>
+                    </form>
                 </div>
                 <div class="entete__explore">
                     <h1>Réservez le menu qui vous convient</h1>
@@ -69,32 +86,32 @@
             <section class="restaurants">
                 <h2>Restaurants</h2>
                 <div class="restaurants--container">
-                    <a href="restaurants/a-la-francaise.html" class="restaurants__box">
+                    <a href="restaurants/la-palette-du-gout.html" class="restaurants__box">
                         <div class="restaurants__box__nouveau restaurants__box__nouveau--active">Nouveau</div>
                         <figure>
-                            <img src="images/restaurants/la-palette-du-gout.jpg" alt="">
+                            <img src="images/restaurants/la-palette-du-gout.jpg" alt="plat en sauce">
                             <figcaption>
                                 <div>
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
-                                <div class="restaurants__box__heart">
+                                <div class="heart">
                                     <div class="heart--normal"><i class="far fa-heart"></i></div>
                                     <div class="heart--active"><i class="fas fa-heart"></i></div>
                                 </div>
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="restaurants/a-la-francaise.html" class="restaurants__box">
+                    <a href="restaurants/la-note-enchantee.html" class="restaurants__box">
                         <div class="restaurants__box__nouveau restaurants__box__nouveau--active">Nouveau</div>
                         <figure>
-                           <img src="images/restaurants/la-note-enchantee.jpg" alt="">
+                           <img src="images/restaurants/la-note-enchantee.jpg" alt="plat en sauce">
                             <figcaption>
                                 <div>
                                     <h3>La note enchantée</h3>
                                     <p>Charonne</p>
                                 </div>
-                                <div class="restaurants__box__heart">
+                                <div class="heart">
                                     <div class="heart--normal"><i class="far fa-heart"></i></div>
                                     <div class="heart--active"><i class="fas fa-heart"></i></div>
                                 </div>
@@ -104,29 +121,29 @@
                     <a href="restaurants/a-la-francaise.html" class="restaurants__box">
                         <div class="restaurants__box__nouveau">Nouveau</div>
                         <figure>
-                            <img src="images/restaurants/a-la-francaise.jpg" alt="">
+                            <img src="images/restaurants/a-la-francaise.jpg" alt="plat en sauce">
                             <figcaption>
                                 <div>
                                     <h3>À la française</h3>
                                     <p>Cité Rouge</p>
                                 </div>
-                                <div class="restaurants__box__heart">
+                                <div class="heart">
                                     <div class="heart--normal"><i class="far fa-heart"></i></div>
                                     <div class="heart--active"><i class="fas fa-heart"></i></div>
                                 </div>
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="restaurants/a-la-francaise.html" class="restaurants__box">
+                    <a href="restaurants/le-delice-des-sens.html" class="restaurants__box">
                         <div class="restaurants__box__nouveau">Nouveau</div>
                         <figure>
-                            <img src="images/restaurants/le-delice-des-sens.jpg" alt="">
+                            <img src="images/restaurants/le-delice-des-sens.jpg" alt="plat de poisson en sauce avec légumes">
                             <figcaption>
                                 <div>
                                     <h3>Le délice des sens</h3>
                                     <p>Folie-Méricourt</p>
                                 </div>
-                                <div class="restaurants__box__heart">
+                                <div class="heart">
                                     <div class="heart--normal"><i class="far fa-heart"></i></div>
                                     <div class="heart--active"><i class="fas fa-heart"></i></div>
                                 </div>
@@ -139,7 +156,7 @@
         <footer class="footer">
             <div class="footer__container">
                 <figure>
-                    <img src="../images/logo/ohmyfood.svg" alt="" class="footer__logo">
+                    <img src="images/logo/ohmyfood.svg" alt="" class="footer__logo">
                 </figure>
                 <ul>
                     <li class="footer--icone">

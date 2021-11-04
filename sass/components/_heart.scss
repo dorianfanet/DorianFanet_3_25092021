@@ -1,0 +1,41 @@
+.heart{
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em;
+    .heart--active{
+        display: none;
+        position: absolute;
+        top: 0;
+        i{
+            position: absolute;
+                background: -webkit-linear-gradient($color-primary, $color-secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+        }
+    }
+    &:hover{
+        .heart--active{
+            display: block;
+            animation: heart--active 500ms ease;
+        }
+        .heart--normal{
+            animation: heart--normal 500ms ease forwards;
+        }
+    }
+}
+@keyframes heart--active{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes heart--normal{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
