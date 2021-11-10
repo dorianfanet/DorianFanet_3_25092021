@@ -228,8 +228,8 @@ header figure figcaption {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: loader 1s 3s forwards;
-          animation: loader 1s 3s forwards;
+  -webkit-animation: loader 1s 2s forwards;
+          animation: loader 1s 2s forwards;
 }
 
 .loader__container {
@@ -240,8 +240,6 @@ header figure figcaption {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-animation: loader-container 3s ease forwards;
-          animation: loader-container 3s ease forwards;
 }
 
 .loader__container span {
@@ -347,8 +345,8 @@ header figure figcaption {
     color: #FF79DA;
   }
   100% {
-    -webkit-transform: translateY(0, 0);
-            transform: translateY(0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     color: #9356DC;
   }
 }
@@ -479,7 +477,7 @@ header figure figcaption {
   background-color: #9356DC;
   border-radius: 50%;
   height: 20px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   font-size: 0.7rem;
   color: white;
   position: absolute;
@@ -773,8 +771,8 @@ header figure figcaption {
   display: -ms-flexbox;
   display: flex;
   width: 130%;
-  -webkit-transition: all 300ms cubic-bezier(0.25, 0, 0.25, 1);
-  transition: all 300ms cubic-bezier(0.25, 0, 0.25, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0, 0.25, 1);
+  transition: all 500ms cubic-bezier(0.25, 0, 0.25, 1);
 }
 
 .menu__box--container:hover {
@@ -782,8 +780,10 @@ header figure figcaption {
 }
 
 .menu__box--container:hover .menu__box__check i {
-  -webkit-animation: check 400ms 100ms ease forwards;
-          animation: check 400ms 100ms ease forwards;
+  -webkit-animation: check 500ms ease forwards;
+          animation: check 500ms ease forwards;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 
 .menu__box__text {
@@ -825,7 +825,6 @@ header figure figcaption {
 }
 
 .menu__box__check {
-  /*display: none;*/
   width: 30%;
   background-color: #99E2D0;
   display: -webkit-box;
@@ -869,8 +868,8 @@ header figure figcaption {
 
 @-webkit-keyframes check {
   0% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -880,8 +879,8 @@ header figure figcaption {
 
 @keyframes check {
   0% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
